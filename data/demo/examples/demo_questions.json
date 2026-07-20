@@ -1,0 +1,22 @@
+[
+  {
+    "query": "Barack Obama 和 Michelle Obama 有什么关系？",
+    "expected": "二者是配偶关系。"
+  },
+  {
+    "query": "Barack Obama 出生在哪里？",
+    "expected": "Barack Obama 出生于 Hawaii。"
+  },
+  {
+    "query": "Michelle Obama 的职业是什么？",
+    "expected": "Michelle Obama 的职业相关信息是 Lawyer。"
+  },
+  {
+    "query": "Hawaii 和 United States 有什么关系？",
+    "expected": "Hawaii 位于 United States。"
+  },
+  {
+    "query": "Barack Obama 和 United States 有什么间接关系？",
+    "expected": "Barack Obama 担任 President，而 President 与 United States 相关。"
+  }
+]

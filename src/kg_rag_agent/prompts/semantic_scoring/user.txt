@@ -1,0 +1,20 @@
+用户问题：
+{query}
+
+最多选择材料数：
+{max_selected_evidence}
+
+候选材料：
+{evidence_json}
+
+请只输出：
+{{
+  "score": 0.0,
+  "answerability": "answerable | uncertain | unanswerable",
+  "reason": "一句简短中文原因",
+  "selected_evidence_ids": ["ev_xxx"],
+  "rejected_evidence_ids": ["ev_yyy"],
+  "evidence_scores": {{
+    "ev_xxx": 0.92
+  }}
+}}

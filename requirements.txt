@@ -1,0 +1,10 @@
+# KG-RAG Agent complete local runtime installation.
+#
+# pyproject.toml is the single source of truth for package versions and
+# dependency groups. This file preserves the familiar installation command:
+#
+#     pip install -r requirements.txt
+#
+# It installs the project in editable mode together with API, retrieval,
+# evaluation, and other optional runtime dependencies.
+-e .[all]

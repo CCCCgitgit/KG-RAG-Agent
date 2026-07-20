@@ -1,0 +1,31 @@
+# 知识图谱底层查询与 Evidence 构建参数。
+graph_path: data/demo/kg/graph.pkl
+graph_stats_path: data/demo/kg/graph_stats.json
+alias_path: data/demo/processed/alias_map.json
+
+use_cache: true
+validate_graph: true
+require_entity_in_graph: true
+allow_linear_scan: true
+
+enable_relation_search: true
+enable_path_search: true
+enable_neighbor_search: true
+enable_subgraph_search: false
+
+max_evidence: 30
+max_neighbors_per_entity: 10
+max_paths_per_pair: 5
+max_path_length: 4
+neighbor_direction: both
+
+subgraph:
+  max_depth: 2
+  max_nodes: 50
+  max_edges: 100
+  direction: both
+
+evidence:
+  min_score: 0.0
+  deduplicate: true
+  include_score_in_text: true

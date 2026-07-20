@@ -1,0 +1,168 @@
+# -----------------------------------------------------------------------------
+# Version control and IDE
+# -----------------------------------------------------------------------------
+.git/
+.gitignore
+.gitattributes
+.github/
+
+.idea/
+.vscode/
+*.iml
+*.code-workspace
+
+# -----------------------------------------------------------------------------
+# Secrets and local environment
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+secrets/
+credentials/
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# -----------------------------------------------------------------------------
+# Python caches and virtual environments
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+.hypothesis/
+.tox/
+.nox/
+
+.venv/
+venv/
+env/
+ENV/
+virtualenv/
+
+# -----------------------------------------------------------------------------
+# Build and packaging artifacts
+# -----------------------------------------------------------------------------
+build/
+dist/
+site/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# -----------------------------------------------------------------------------
+# Test, coverage and development-only files
+# -----------------------------------------------------------------------------
+tests/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+pytest-report.xml
+junit.xml
+
+pytest.ini
+requirements.txt
+
+# -----------------------------------------------------------------------------
+# Documentation not required in the runtime image
+# README.md must remain available because pyproject.toml references it.
+# -----------------------------------------------------------------------------
+docs/
+
+# -----------------------------------------------------------------------------
+# Large local datasets and generated stores
+# Runtime directories are created inside the image or mounted as volumes.
+# -----------------------------------------------------------------------------
+data/
+outputs/
+logs/
+reports/
+artifacts/
+memory/
+memory_store/
+checkpoints/
+
+models/
+chroma/
+.chroma/
+.langgraph_api/
+
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+*.pkl
+*.pickle
+*.gpickle
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.faiss
+*.index
+*.npy
+*.npz
+
+# -----------------------------------------------------------------------------
+# Temporary files and archives
+# -----------------------------------------------------------------------------
+tmp/
+temp/
+.cache/
+.history/
+.ipynb_checkpoints/
+
+*.log
+*.log.*
+*.tmp
+*.temp
+*.bak
+*.old
+*.swp
+*.swo
+*~
+
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# -----------------------------------------------------------------------------
+# Operating-system files
+# -----------------------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+Desktop.ini
+
+# -----------------------------------------------------------------------------
+# Local deployment overrides
+# -----------------------------------------------------------------------------
+docker-compose.override.yml
+compose.override.yml
+*.local.yaml
+*.local.yml
+*.local.json
+
+# Frontend has its own Docker build context.
+frontend/
+node_modules/

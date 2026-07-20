@@ -1,0 +1,24 @@
+{
+  "name": "demo_kg",
+  "description": "A minimal demo knowledge graph for KG-RAG Agent.",
+  "profile": "demo",
+  "num_nodes": 6,
+  "num_edges": 7,
+  "is_directed": true,
+  "is_multigraph": true,
+  "node_types": {
+    "person": 2,
+    "place": 1,
+    "country": 1,
+    "occupation": 1,
+    "position": 1
+  },
+  "relation_types": {
+    "spouse": 2,
+    "born_in": 1,
+    "held_position": 1,
+    "occupation": 1,
+    "located_in": 1,
+    "of_country": 1
+  }
+}

@@ -1,0 +1,28 @@
+用户问题：
+{query}
+
+可回答性：
+{answerability}
+
+匹配分数：
+{semantic_score}
+
+最多推理步骤：
+{max_reasoning_steps}
+
+已有材料文本：
+{evidence_text}
+
+已有材料 JSON：
+{evidence_json}
+
+请只输出：
+{{
+  "reasoning_chain": [
+    "第一条中间判断",
+    "第二条中间判断"
+  ],
+  "conclusion": "一句中间结论",
+  "used_evidence_ids": ["ev_xxx"],
+  "confidence": 0.8
+}}

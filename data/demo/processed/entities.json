@@ -1,0 +1,100 @@
+[
+  {
+    "entity_id": "barack_obama",
+    "entity_name": "Barack Obama",
+    "name": "Barack Obama",
+    "node_key": "barack_obama",
+    "type": "person",
+    "aliases": [
+      "Barack Obama",
+      "Obama",
+      "奥巴马",
+      "贝拉克·奥巴马"
+    ],
+    "description": "The 44th president of the United States.",
+    "metadata": {
+      "profile": "demo"
+    }
+  },
+  {
+    "entity_id": "michelle_obama",
+    "entity_name": "Michelle Obama",
+    "name": "Michelle Obama",
+    "node_key": "michelle_obama",
+    "type": "person",
+    "aliases": [
+      "Michelle Obama",
+      "Michelle",
+      "米歇尔·奥巴马",
+      "米歇尔"
+    ],
+    "description": "An American attorney and author, and former First Lady of the United States.",
+    "metadata": {
+      "profile": "demo"
+    }
+  },
+  {
+    "entity_id": "hawaii",
+    "entity_name": "Hawaii",
+    "name": "Hawaii",
+    "node_key": "hawaii",
+    "type": "place",
+    "aliases": [
+      "Hawaii",
+      "夏威夷"
+    ],
+    "description": "A state of the United States.",
+    "metadata": {
+      "profile": "demo"
+    }
+  },
+  {
+    "entity_id": "united_states",
+    "entity_name": "United States",
+    "name": "United States",
+    "node_key": "united_states",
+    "type": "country",
+    "aliases": [
+      "United States",
+      "USA",
+      "U.S.",
+      "America",
+      "美国"
+    ],
+    "description": "A country in North America.",
+    "metadata": {
+      "profile": "demo"
+    }
+  },
+  {
+    "entity_id": "lawyer",
+    "entity_name": "Lawyer",
+    "name": "Lawyer",
+    "node_key": "lawyer",
+    "type": "occupation",
+    "aliases": [
+      "Lawyer",
+      "Attorney",
+      "律师"
+    ],
+    "description": "A legal professional.",
+    "metadata": {
+      "profile": "demo"
+    }
+  },
+  {
+    "entity_id": "president",
+    "entity_name": "President",
+    "name": "President",
+    "node_key": "president",
+    "type": "position",
+    "aliases": [
+      "President",
+      "总统"
+    ],
+    "description": "A head of state or head of government position.",
+    "metadata": {
+      "profile": "demo"
+    }
+  }
+]

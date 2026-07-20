@@ -1,0 +1,12 @@
+{
+  "dataset_name": "sample",
+  "dataset_version": "1.0.0",
+  "cases": [
+    {
+      "case_id": "sample_001",
+      "query": "Alice 与 Bob 有什么关系？",
+      "expected_route": "kg_rag",
+      "expected_keywords": ["Alice", "Bob"]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+# 内部 ToolRegistry 的系统级权限和资源边界。
+enabled: true
+default_timeout_seconds: 30
+max_calls_per_request: 20
+max_workers: 4
+max_result_chars: 100000
+
+allowed_permissions:
+  - read
+  - execute
+allowed_tools: null
+denied_tools: []
+allow_destructive: false
+
+file:
+  enabled: true
+  base_dir: data
+  allow_absolute_paths: false
+  max_read_bytes: 5242880
+  max_write_bytes: 5242880
+  allow_write: false
+  allow_delete: false
+
+kg:
+  enabled: true
+  read_only: true
+
+vector:
+  enabled: true
+  read_only: true

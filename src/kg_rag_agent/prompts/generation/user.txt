@@ -1,0 +1,33 @@
+请根据以下信息生成最终回答。
+
+用户问题：
+{query}
+
+可回答性：
+{answerability}
+
+匹配分数：
+{semantic_score}
+
+推理置信度：
+{confidence}
+
+已有信息：
+{evidence_text}
+
+材料摘要：
+{evidence_brief}
+
+中间判断：
+{reasoning_text}
+
+写作要求：
+1. 使用自然、清晰的中文，优先直接给出结论。
+2. 明确关系问题应直接回答对应对象或关系。
+3. 不要输出 Markdown 表格。
+4. 不得使用已有信息无法支持的内容。
+5. uncertain 时使用谨慎表达；unanswerable 时明确说明不能可靠判断。
+6. 不得提及知识图谱、KG、KG-RAG、实体链接、图谱检索、检索节点、路由节点、LangGraph、StateGraph 或内部流程。
+7. 不要说“我查询了某系统”，只需根据已有信息作答。
+
+请只输出面向用户的最终回答。

@@ -1,0 +1,10 @@
+{
+  "profile": "demo",
+  "total_lines": 7,
+  "valid_lines": 7,
+  "used_entity_count": 6,
+  "used_relation_count": 6,
+  "used_time_id_count": 1,
+  "min_time_id": 0,
+  "max_time_id": 0
+}

@@ -1,0 +1,8 @@
+用户问题：
+{query}
+
+请只输出：
+{{
+  "route": "kg_rag | direct_llm | clarify",
+  "reason": "一句简短中文原因"
+}}

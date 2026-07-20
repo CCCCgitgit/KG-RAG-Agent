@@ -1,0 +1,13 @@
+用户问题：
+{query}
+
+请只输出：
+[
+  {{
+    "text": "对象名称",
+    "start": 0,
+    "end": 4,
+    "type": "person | organization | location | concept | event | work | unknown",
+    "confidence": 0.95
+  }}
+]

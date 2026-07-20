@@ -1,0 +1,59 @@
+# LangGraph 编排与节点级稳定参数。
+# Graph 拓扑由 Python 代码定义；本文件只保存开关与参数。
+graph_path: data/demo/kg/graph.pkl
+checkpointer: null
+interrupt_before: null
+interrupt_after: null
+
+router:
+  use_llm: false
+
+mention_extraction:
+  use_llm: false
+  min_confidence: 0.3
+  max_mentions: 8
+
+entity_linking:
+  top_k: 5
+  min_score: 0.0
+  keep_empty_candidates: true
+  auto_select_threshold: 0.72
+  margin_threshold: 0.05
+  cache_key: default
+
+entity_grounding:
+  min_score: 0.0
+  max_entities: 16
+  one_entity_per_mention: true
+  require_in_graph: true
+  allow_linear_scan: true
+
+kg_retrieval:
+  enable_relation_search: true
+  enable_path_search: true
+  enable_neighbor_search: true
+  enable_subgraph_search: false
+  max_evidence: 30
+  max_neighbors_per_entity: 10
+  max_paths_per_pair: 5
+  max_path_length: 4
+  min_score: 0.0
+  subgraph_max_depth: 2
+  subgraph_max_nodes: 50
+  subgraph_max_edges: 100
+
+semantic_scoring:
+  use_llm: false
+  max_selected_evidence: 8
+  min_evidence_score: 0.15
+  answerable_threshold: 0.55
+  uncertain_threshold: 0.25
+
+reasoning:
+  use_llm: false
+  max_reasoning_steps: 5
+
+generation:
+  use_llm: true
+  temperature: 0.2
+  max_tokens: 1200

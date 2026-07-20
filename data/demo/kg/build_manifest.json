@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "build_id": "demo-static-v1",
+  "created_at": "2026-07-17T05:34:19.948368+00:00",
+  "profile": "demo",
+  "ok": true,
+  "paths": {
+    "profile": "demo",
+    "processed_dir": "data/demo/processed",
+    "kg_dir": "data/demo/kg",
+    "vector_store_dir": "data/demo/vector_store",
+    "examples_dir": "data/demo/examples"
+  },
+  "artifacts": {
+    "entities": {
+      "path": "data/demo/processed/entities.json",
+      "required": true,
+      "exists": true,
+      "size_bytes": 2098,
+      "sha256": "c3c96bcb580a86e9d468a613758e6950d4efe2eba1b06e232d82ac359a0168e3"
+    },
+    "relations": {
+      "path": "data/demo/processed/relations.json",
+      "required": true,
+      "exists": true,
+      "size_bytes": 770,
+      "sha256": "16ad9dd5e396a9f3a9ff3ba446d1da089aa62970179471f52f80fbe0d581564f"
+    },
+    "triples": {
+      "path": "data/demo/processed/triples.csv",
+      "required": true,
+      "exists": true,
+      "size_bytes": 382,
+      "sha256": "c3b76ae61b93b2c2770af8c74636e6b87040b708b39164bd19224151764f2b2d"
+    },
+    "entity_index": {
+      "path": "data/demo/processed/entity_index.json",
+      "required": true,
+      "exists": true,
+      "size_bytes": 116,
+      "sha256": "ddfa8acb5c552ed2b411189d442343348136f05cf0d9952305e6e45a1db3ce46"
+    },
+    "relation_index": {
+      "path": "data/demo/processed/relation_index.json",
+      "required": true,
+      "exists": true,
+      "size_bytes": 112,
+      "sha256": "2b6f0f6b75377047001a12c487b30eb6bb1f85b955b8d6c8f7226a6957051a33"
+    },
+    "alias_map": {
+      "path": "data/demo/processed/alias_map.json",
+      "required": true,
+      "exists": true,
+      "size_bytes": 10796,
+      "sha256": "499a7397dcaccec34e3e667265e1269206e39b18e5947bc3996548ef209e4668"
+    },
+    "graph": {
+      "path": "data/demo/kg/graph.pkl",
+      "required": true,
+      "exists": true,
+      "size_bytes": 2178,
+      "sha256": "7c776a282de3bd1bed185b91957809e665c2d8b57ed7bf99cd7adcad16d15c70"
+    },
+    "graph_stats": {
+      "path": "data/demo/kg/graph_stats.json",
+      "required": true,
+      "exists": true,
+      "size_bytes": 458,
+      "sha256": "e5fb8081dce184baec26051471ab1fe59ba4bb6a06963ff0dc427741c4e98ba1"
+    },
+    "demo_questions": {
+      "path": "data/demo/examples/demo_questions.json",
+      "required": true,
+      "exists": true,
+      "size_bytes": 650,
+      "sha256": "d6a07d8e26611e01a9416b9139ba91cef1b91b7837a5e21208792b4f8dc5428c"
+    },
+    "vector_stats": {
+      "path": "data/demo/vector_store/vector_store_stats.json",
+      "required": false,
+      "exists": true,
+      "size_bytes": 285,
+      "sha256": "a470e6017683d3728f4f6f31cc56c8d03ceb1bb53216f51d12ba57f06cf206b4"
+    }
+  }
+}

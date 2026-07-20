@@ -1,0 +1,8 @@
+head_entity,head_id,relation_code,internal_relation_id,tail_entity,tail_id,time_id
+Barack Obama,0,spouse,0,Michelle Obama,1,0
+Michelle Obama,1,spouse,0,Barack Obama,0,0
+Barack Obama,0,born_in,1,Hawaii,2,0
+Hawaii,2,located_in,2,United States,3,0
+Michelle Obama,1,occupation,3,Lawyer,4,0
+Barack Obama,0,held_position,4,President,5,0
+President,5,of_country,5,United States,3,0

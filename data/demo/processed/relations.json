@@ -1,0 +1,38 @@
+[
+  {
+    "relation_code": "spouse",
+    "internal_relation_id": 0,
+    "name": "spouse",
+    "relation": "spouse"
+  },
+  {
+    "relation_code": "born_in",
+    "internal_relation_id": 1,
+    "name": "born_in",
+    "relation": "born_in"
+  },
+  {
+    "relation_code": "located_in",
+    "internal_relation_id": 2,
+    "name": "located_in",
+    "relation": "located_in"
+  },
+  {
+    "relation_code": "occupation",
+    "internal_relation_id": 3,
+    "name": "occupation",
+    "relation": "occupation"
+  },
+  {
+    "relation_code": "held_position",
+    "internal_relation_id": 4,
+    "name": "held_position",
+    "relation": "held_position"
+  },
+  {
+    "relation_code": "of_country",
+    "internal_relation_id": 5,
+    "name": "of_country",
+    "relation": "of_country"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "profile": "demo",
+  "collection_name": "kg_entities",
+  "entity_count": 6,
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "source": "data/demo/processed/entities.json",
+  "note": "Prebuilt demo vector store bundled for local smoke tests."
+}

@@ -1,0 +1,9 @@
+# 统一评估入口与报告参数。
+enabled: true
+output_dir: outputs/evaluation
+continue_on_error: true
+include_raw_state: false
+strict_dataset: true
+write_csv: true
+write_manifest: true
+default_limit: null

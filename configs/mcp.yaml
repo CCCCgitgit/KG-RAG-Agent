@@ -1,0 +1,24 @@
+# MCP 默认关闭。凭据、Token 和私钥必须通过环境变量提供。
+enabled: false
+
+client:
+  enabled: false
+  timeout_seconds: 30
+  max_retries: 2
+  max_result_chars: 100000
+  allowed_servers: []
+
+server:
+  enabled: false
+  transport: stdio
+  expose_agent: false
+  expose_tools: false
+  expose_resources: false
+  expose_prompts: false
+
+security:
+  allow_network: false
+  allow_write: false
+  allow_execute: false
+  allow_delete: false
+  max_calls_per_request: 10

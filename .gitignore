@@ -1,0 +1,229 @@
+# -----------------------------------------------------------------------------
+# Secrets and local environment
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+/secrets/
+/credentials/
+
+# -----------------------------------------------------------------------------
+# Python bytecode, caches and tooling
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+.hypothesis/
+.tox/
+.nox/
+
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+pytest-report.xml
+junit.xml
+
+# -----------------------------------------------------------------------------
+# Virtual environments
+# -----------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+virtualenv/
+
+# -----------------------------------------------------------------------------
+# Packaging and build artifacts
+# -----------------------------------------------------------------------------
+/build/
+/dist/
+/site/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+MANIFEST
+
+# -----------------------------------------------------------------------------
+# IDE, editor and operating-system files
+# -----------------------------------------------------------------------------
+.idea/
+.vscode/
+*.code-workspace
+*.iml
+
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+Desktop.ini
+
+*.swp
+*.swo
+*~
+.history/
+
+# -----------------------------------------------------------------------------
+# Jupyter and interactive development
+# -----------------------------------------------------------------------------
+.ipynb_checkpoints/
+
+# -----------------------------------------------------------------------------
+# Logs, reports and temporary runtime files
+# -----------------------------------------------------------------------------
+/logs/**
+/outputs/**
+/reports/**
+/artifacts/**
+/tmp/**
+/temp/**
+/.cache/**
+
+*.log
+*.log.*
+*.tmp
+*.temp
+*.bak
+*.old
+*.pid
+*.pid.lock
+*.lock
+
+# Keep directories and explicit placeholders, but ignore generated contents.
+!/logs/**/
+!/outputs/**/
+!/reports/**/
+!/artifacts/**/
+!/tmp/**/
+!/temp/**/
+!/**/.gitkeep
+
+# -----------------------------------------------------------------------------
+# Runtime Memory and LangGraph state
+# -----------------------------------------------------------------------------
+# Anchored paths ensure src/kg_rag_agent/memory/ remains tracked.
+/memory/**
+/memory_store/**
+/checkpoints/**
+/.langgraph_api/**
+/langgraph.db
+/langgraph.sqlite
+/langgraph.sqlite3
+
+*.memory.json
+*.memory.jsonl
+memories.json
+memories.jsonl
+memory.db
+memory.sqlite
+memory.sqlite3
+
+# The default persistent Memory location is outputs/memory/, already excluded.
+
+# -----------------------------------------------------------------------------
+# Local databases and vector stores
+# -----------------------------------------------------------------------------
+/data/vector_store/**
+/data/vector_db/**
+/data/chroma/**
+/chroma/**
+/.chroma/**
+chroma.sqlite3
+
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+
+# -----------------------------------------------------------------------------
+# Generated knowledge-graph and data-pipeline products
+# -----------------------------------------------------------------------------
+/data/raw/**
+/data/processed/**
+/data/production/**
+/data/interim/**
+/data/cache/**
+
+/data/kg/*.pkl
+/data/kg/*.pickle
+/data/kg/*.gpickle
+
+# Re-include directories so README.md and .gitkeep placeholders can be tracked.
+!/data/**/
+!/data/**/.gitkeep
+!/data/**/README.md
+
+# Lightweight examples and graph metadata are safe to version.
+/data/examples/**
+!/data/examples/
+!/data/examples/**
+!/data/kg/graph_stats.json
+
+# -----------------------------------------------------------------------------
+# Model and embedding artifacts
+# -----------------------------------------------------------------------------
+/models/**
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+*.safetensors
+*.faiss
+*.index
+*.npy
+*.npz
+
+# -----------------------------------------------------------------------------
+# Local overrides and generated deployment files
+# -----------------------------------------------------------------------------
+docker-compose.override.yml
+compose.override.yml
+*.local.yaml
+*.local.yml
+*.local.json
+
+# -----------------------------------------------------------------------------
+# Miscellaneous archives generated during development
+# -----------------------------------------------------------------------------
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# -----------------------------------------------------------------------------
+# Frontend dependencies and build output
+# -----------------------------------------------------------------------------
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# -----------------------------------------------------------------------------
+# Profile-based data layout
+# -----------------------------------------------------------------------------
+/data/production/**
+!/data/production/
+!/data/production/README.md
+!/data/production/**/.gitkeep
+
+# The bundled Demo profile is intentionally versioned for smoke tests.
+!/data/demo/
+!/data/demo/**

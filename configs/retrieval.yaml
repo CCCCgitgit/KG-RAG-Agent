@@ -1,0 +1,46 @@
+# Embedding、向量库、混合召回与重排参数。
+embedding_model: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+device: null
+local_files_only: true
+allow_hash_fallback: false
+hash_embedding_dim: 384
+batch_size: 32
+normalize_embeddings: true
+
+entity_chroma_dir: data/demo/vector_store/chroma_entity_db
+entity_collection_name: kg_entities
+create_entity_collection_if_missing: true
+
+doc_chroma_dir: data/demo/vector_store/chroma_doc_db
+doc_collection_name: kg_documents
+create_doc_collection_if_missing: false
+
+top_k: 5
+entity_top_k: 5
+doc_top_k: 8
+min_score: 0.0
+
+hybrid:
+  enable_vector: true
+  enable_entity: true
+  enable_keyword: true
+  vector_weight: 0.60
+  entity_weight: 0.30
+  keyword_weight: 0.10
+  top_k: 10
+  min_score: 0.0
+  fail_silently: true
+
+reranker:
+  use_cross_encoder: false
+  cross_encoder_model: cross-encoder/mmarco-mMiniLMv2-L12-H384-v1
+  local_files_only: true
+  device: null
+  fail_silently: true
+  score_weight: 0.45
+  query_overlap_weight: 0.25
+  entity_match_weight: 0.15
+  source_weight: 0.10
+  length_weight: 0.05
+  top_k: 8
+  min_score: 0.0

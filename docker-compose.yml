@@ -1,0 +1,108 @@
+name: kg-rag-agent
+
+services:
+  api:
+    container_name: kg-rag-agent-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PYTHON_VERSION: ${PYTHON_VERSION:-3.12}
+        APP_UID: ${APP_UID:-10001}
+        APP_GID: ${APP_GID:-10001}
+    image: kg-rag-agent:${KG_RAG_IMAGE_TAG:-latest}
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      KG_RAG_AGENT_ROOT: /app
+      KG_RAG_API_INITIALIZE_SERVICE: ${KG_RAG_API_INITIALIZE_SERVICE:-true}
+      KG_RAG_API_DOCS_ENABLED: ${KG_RAG_API_DOCS_ENABLED:-true}
+      KG_RAG_API_ALLOW_RAW_STATE: ${KG_RAG_API_ALLOW_RAW_STATE:-false}
+      KG_RAG_API_PREFIX: ${KG_RAG_API_PREFIX:-/api}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    command:
+      - python
+      - -m
+      - kg_rag_agent
+      - --serve
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+      - --workers
+      - ${KG_RAG_API_WORKERS:-1}
+      - --log-level
+      - ${KG_RAG_API_LOG_LEVEL:-info}
+    ports:
+      - "${KG_RAG_API_HOST:-127.0.0.1}:${KG_RAG_API_PORT:-8000}:8000"
+    volumes:
+      - type: bind
+        source: ./configs
+        target: /app/configs
+        read_only: true
+      - type: bind
+        source: ./data
+        target: /app/data
+      - type: bind
+        source: ./outputs
+        target: /app/outputs
+      - type: bind
+        source: ./logs
+        target: /app/logs
+    restart: unless-stopped
+    init: true
+    stop_grace_period: 30s
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - >-
+          import urllib.request;
+          urllib.request.urlopen(
+          'http://127.0.0.1:8000/api/health',
+          timeout=3
+          ).read()
+      interval: 30s
+      timeout: 5s
+      start_period: 30s
+      retries: 3
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - kg-rag-network
+
+  frontend:
+    container_name: kg-rag-agent-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: kg-rag-agent-frontend:${KG_RAG_IMAGE_TAG:-latest}
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "${KG_RAG_FRONTEND_HOST:-127.0.0.1}:${KG_RAG_FRONTEND_PORT:-5173}:80"
+    restart: unless-stopped
+    init: true
+    healthcheck:
+      test:
+        - CMD
+        - wget
+        - -q
+        - -O-
+        - http://127.0.0.1/
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - kg-rag-network
+
+networks:
+  kg-rag-network:
+    name: kg-rag-agent-network
+    driver: bridge

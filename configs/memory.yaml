@@ -1,0 +1,9 @@
+# Memory 当前默认关闭；启用前需完成命名空间、预算和持久化实现。
+enabled: false
+namespace_prefix: kg_rag_agent
+max_messages: 20
+max_summary_tokens: 1200
+max_retrieved_items: 8
+max_context_tokens: 4000
+write_enabled: false
+long_term_enabled: false
